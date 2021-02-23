@@ -1,0 +1,890 @@
+@import url('Slider.css');
+td
+{
+    font: arial, bold;
+}
+body
+{
+    height: complex;
+    font-family: Arial;
+    background-color: rgb(240,240,240);
+    box-sizing: border-box;
+}
+th
+{
+
+}
+
+
+.thPrincipal
+{
+    box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.75);
+}
+.btnAccion
+{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+p
+{
+    text-align:center;
+}
+
+
+.contenedorMaster
+{
+    width:95%;
+
+    height: 580px;
+    margin-left:  3%;
+    margin-top: 2%;
+    border-radius: 24px;
+}
+
+.tbRegistro
+{
+    padding-top:10px;
+    padding-left: 2px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-right-color: rgba(0,0,0,0.2);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    background-color: white;
+
+}
+
+.tbDatosReg
+{
+    width: 92%;
+    height: auto;
+    margin-left: 4%;
+    margin-top: 2%;   
+    border: 1px #d6d6d6 solid;
+}
+
+.tbDatosReg tr td
+{
+    border: 1px #d6d6d6 solid;    
+    padding-left: 10px;
+    margin: 0;
+    border: 1px #d6d6d6 solid;
+}
+
+.infoPaciente
+{    
+    padding-top:10px;
+    padding-left: 2px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-right-color: rgba(0,0,0,0.2);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    background-color: white;
+
+}
+.imgLogo
+{
+
+    height: 100px;
+
+}
+
+.PanBotonesInfo
+{    
+
+
+
+
+}
+.sec_cont_btnInfo
+{
+    display: flex;
+    margin-top: 15px;
+}
+.btnInfo
+{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-right-color: rgba(0,0,0,0.2);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    width: 230px;
+    height: 70px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.btnInfo1
+{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-right-color: rgba(0,0,0,0.2);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 64px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 15px;
+    text-align: center;    
+}
+
+.imgInfoGeneral
+{
+    height: 40px;
+}
+.btnInfo1_2
+{
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-right-color: rgba(0,0,0,0.2);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 15px;
+    margin-right: 5px;
+    padding-left: 5px;
+    width: 300px;
+    height: 130px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(105,105,105);
+}
+.info_btninfo
+{
+
+
+}
+.Sec_botones_Admin
+{
+    margin-top: 3px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+
+}
+.btnOpc_Reg
+{
+    padding-top: 20px;
+
+}
+
+.btnOpc_Reg div h3
+{
+    margin-top: 15px;
+}
+
+.btnGestion
+{
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    border: 1px solid #696969;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal normal bold 13px/normal Arial, Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #696969;
+    margin-right: 5px;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    width: 100px;
+    height: 40px;
+}
+
+.btnReporte
+{    
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    border: 1px solid #018dc4;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal normal bold 13px/normal Arial, Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #0199d9;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    width: 100px;    
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnReporte > li
+{
+    display: inline-table;
+}
+
+.ul_submenu{
+    position: absolute;
+    background: #007b93;    
+    width: 125px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s;
+    height: auto;
+}
+
+.ul_submenu li:nth-child(1), .ul_submenu li:nth-child(2), .ul_submenu li:nth-child(3), .ul_submenu li:nth-child(4)
+{
+    width: 125px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.btnReporte .ul_submenu li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.btnReporte:hover .ul_submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.ul_submenu li:hover
+{
+    background-color: #0199d9;
+}
+
+
+.zonaLogo
+{
+    display: flex;
+    height: 170px;
+    align-items: center;
+    border-radius:  8px;
+    border-style: solid; 
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-right-color: rgba(0,0,0,0.2);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    background-color: white;
+
+}
+.sub_sec_info
+{
+    display: flex;
+    margin-top: 15px;
+    alignment-adjust: central;    
+}
+
+.sec_info_sup
+{
+    margin-right: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.sec_info_sup_admin
+{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.auxInfo
+{
+    width: 100%;
+    justify-content: center;
+}
+
+.tituloInfo
+{
+    margin-right: 5px;
+    margin-top: 50px;
+}
+
+.EncabezadoPanRegistros
+{
+
+    font: normal normal bold 18px/normal Arial, Helvetica, sans-serif;
+    margin-top: 25px;
+}
+.PanelRegistros
+{
+    alignment-adjust: central;
+    border-radius:  8px;
+    border-style: solid; 
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-right-color: rgba(0,0,0,0.2);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-width: 1px;
+    width: 100%;
+    height: 150px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    background-color: white;
+}
+
+
+
+.linea {
+    border-top: 1px solid activecaption;
+    height: 2px;
+    max-width: 98%;
+    padding: 0;
+    align-self: center;
+}
+.detalleRegistro
+{
+    alignment-adjust: central;
+    text-align: center;
+}
+.btnRevisar
+{
+    background-color: #3295EB;
+    color: white;     
+    width: 120px;
+    text-align: center;
+    height: 32px;
+    border-radius: 8px;
+    border-color: #3295EB;
+    font-family: arial;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+.listaInicio
+{
+    text-align: right;
+
+}
+
+/*nav:lang(es-419){
+    display: table;
+    margin: auto;
+    width: 100%;
+    height: 40px;
+    text-align: center;    
+    background-color: #00BAAF;
+}
+
+ul{
+    display: block;    
+    list-style: none;
+    float: left;
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+}
+
+ul li{
+    float: left;
+    margin: 10px;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 14px;    
+}
+
+
+ul li:nth-child(4), ul li:nth-child(3), ul li:nth-child(2)
+{
+    float: right;
+    margin: 10px;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 14px;    
+    margin-left: 20px;
+    padding-left: 20px;
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", Helvetica, Arial, sans-serif;
+    outline-width: 0;
+}
+
+/*header{
+    width: 100%;
+    height: 70px;
+}
+
+.navegacion{    
+    position: fixed;
+    width: 100%;
+    height: 70px;    
+    background: #3295EB;
+    display: flex;
+    align-items: center;
+}
+
+.navegacion > ul{
+    width: auto;
+    height: 20px;
+    list-style: none;    
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.navegacion ul
+{
+    list-style: none;
+}
+
+.menu > li{
+    display: inline-table;
+}
+
+.menu > li > a{
+    padding-right: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+ Submenu
+
+.submenu{
+    position: absolute;
+    background: #007b93;
+    width: 125px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s;
+    z-index: 1000;
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+}*/
+
+.section_datos
+{
+    width: 100%;
+    height: 500px;
+    margin-top: 75px;
+}
+
+
+
+.sec_nuevo
+{    
+    width: 15%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.sec_nuevo button
+{
+    float: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 30px;
+    background-color: #239800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+
+.div_p_principal
+{
+    width: 50%;
+    border: 1px blue solid;
+    height: auto;
+    margin-left: 50px;
+}
+
+.div_principal
+{
+    border: 1px red solid;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+.div_sec_1, .div_sec_2
+{
+    width: 50%; 
+    border: 1px red solid; 
+    height: 90px;
+}
+
+.div_pacientes
+{
+    border: 1px red solid;
+    width: 100%;
+    height: 100px;
+}
+
+
+.modal
+{
+    width: 100%;
+    height: 100vh;    
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;    
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    box-sizing: border-box;
+}
+
+.div_cont
+{
+    width: 60%;
+    height: auto;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.div_cont_personales
+{        
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;        
+    box-sizing: border-box;           
+}
+
+.div_cont_personales h3:before
+{
+    font-size: 1.4em;
+    content: 'Personalizar reporte';
+    font-weight: bold;
+}
+
+.div_cont_tipo_reporte 
+{
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_cont_completo, .div_cont_con_alertas, .div_cont_sin_alertas
+{
+    box-sizing: border-box;
+    width: 33%;
+    height: auto;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content-input input,
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;        
+}
+ 
+.content-input input{
+	visibility: hidden;
+	position: absolute;
+	right: 0;                
+}
+
+.content-input{
+	position: relative;
+	margin-bottom: 30px;
+	padding:5px 0 5px 60px; /* Damos un padding de 60px para posicionar 
+        el elemento <i> en este espacio*/
+	display: block;
+        cursor: pointer;
+        font-weight: bold;
+}
+ 
+/* Estas reglas se aplicarán a todos las elementos i 
+después de cualquier input*/
+.content-input input + i{
+       background: #696969;
+       border:2px solid rgba(0,0,0,0.2);
+       position: absolute; 
+       left: 0;
+       top: 0;
+}
+ 
+/* Estas reglas se aplicarán a todos los i despues 
+de un input de tipo checkbox*/
+.content-input input[type=checkbox ] + i{
+	width: 52px;
+	height: 30px;
+	border-radius: 15px;
+}
+
+/*
+Creamos el círculo que aparece encima de los checkbox
+con la etqieta before. Importante aunque no haya contenido
+debemos poner definir este valor.
+*/
+.content-input input[type=checkbox] + i:before{
+	content: ''; /* No hay contenido */
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+	-webkit-box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+	box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+}
+
+.content-input input[type=checkbox]:checked + i:before{
+	left: 22px;
+	-webkit-box-shadow: -3px 0 3px 0 rgba(0,0,0,0.2);
+	box-shadow: 3px 0 -3px 0 rgba(0,0,0,0.2);
+}
+ 
+.content-input input[type=checkbox]:checked + i{
+ background: #0199d9;
+}
+
+.content-input input[type=checkbox] + i:after{
+	content: 'SÍ';
+	position: absolute;
+	font-size: 12px;
+	color: rgb(255,255,255);
+	top: 8px;
+	left: 4px;
+	opacity: 0 /* Ocultamos este elemento */;
+	transition: all 0.10s ease 0.10s;
+        font-weight: bold;
+}
+ 
+/* Cuando esté checkeado cambiamos la opacidad a 1 y lo mostramos */
+.content-input input[type=checkbox]:checked + i:after{
+ opacity: 1;
+}
+
+
+.div_cont_opc
+{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+}
+
+.div_sub_cont_opc
+{
+    box-sizing: border-box;
+    width: 300px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_cont_aceptar, .div_cont_cancelar
+{
+    box-sizing: border-box;
+    width: 49%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_cont_cancelar
+{
+    margin-right: 5px;
+}
+
+.btn_canc, .btn_envi
+{
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    color: #FFFFFF;
+}
+
+.btn_canc
+{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    border: 1px solid #696969;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal normal bold 13px/normal Arial, Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;    
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    width: 100%;    
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #696969;
+}
+
+.btn_envi
+{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    border: 1px solid #018dc4;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal normal bold 13px/normal Arial, Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #0199d9;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    width: 100%;    
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_canc:hover
+{
+    background-color: #3E3E3E;
+}
+
+.btn_envi:hover
+{
+    background-color: #007b93;
+}
+
+.div_cont_rango
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_desde, .div_hasta
+{
+    box-sizing: border-box;
+    width: 35%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[type="date"] {
+  background:#fff url(../Imagenes/calendario.webp)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+}
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 3px 5px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+  width: 190px;
+  margin-left: 20px;
+}

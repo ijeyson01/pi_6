@@ -1,0 +1,454 @@
+:root
+{
+    --width: 300px;
+    --padding: 10px;
+    --bgcolor: rgb(52,52,52);
+    --hovercolor: rgb(23,23,23);
+    --widthcoll: 50px;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: 50px;
+    box-sizing: border-box;
+}
+
+.body-expanded
+{
+    margin-left: var(--width);
+}
+
+
+
+#sidemenu
+{
+    background-color: rgb(52,52,52);
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+#sidemenu a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+#sidemenu #header
+{
+    box-sizing: border-box;
+    border-bottom: solid 1px rgb(23,23,23);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+#sidemenu #header #titulo
+{
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 85%;
+}
+
+
+#sidemenu #header #titulo, #sidemenu #header #div_cont_menu
+{
+    vertical-align: middle;
+}
+
+#sidemenu #header #div_cont_menu
+{
+    display: inline-block;
+}
+
+#sidemenu #header #div_cont_menu
+{
+    cursor: pointer;
+    padding: 10px;
+    width: var(--widthcoll);
+    box-sizing: border-box;    
+}
+
+#sidemenu #header #div_cont_menu:hover
+{
+    background-color: rgb(23,23,23);
+}
+
+
+#sidemenu #header #div_cont_menu .div_btn_ham
+{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;    
+}
+
+
+#sidemenu .div_perfil
+{
+    border-bottom: solid 1px rgb(23,23,23);
+    padding: var(--pading) 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#sidemenu .div_perfil .div_foto
+{
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 auto;   
+    margin-top: 10px;
+    border: 1px #000000 solid;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#sidemenu .div_perfil .div_foto span
+{    
+    border-radius: 50%;
+    width: 60%;
+}
+
+#sidemenu .div_perfil .div_foto, #sidemenu .div_perfil .div_usuario
+{
+    font-size: 24px;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+
+#sidemenu #menu_items
+{
+    overflow: hidden;
+}
+
+#sidemenu #menu_items .items
+{
+    width: var(--width);    
+}
+
+#sidemenu #menu_items .items .div_img
+{
+    display: inline-block;
+}
+
+
+#sidemenu #menu_items .items .div_img, #sidemenu #menu_items .items .div_nombre_opcion
+{
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#sidemenu #menu_items .items a
+{
+    display: block;    
+}
+
+#sidemenu #menu_items .items a:hover
+{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #menu_items .items .div_img
+{
+    box-sizing: border-box;
+    padding: var(--padding);
+    width: var(--widthcoll);
+}
+
+#sidemenu #menu_items .items .div_img img
+{
+    width: 100%;
+}
+
+#sidemenu #menu_items .items .div_nombre_opcion
+{
+    padding: var(--padding) 0;
+}
+
+
+#sidemenu #menu_items .items.separator
+{
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor);
+    margin: 15px 0;    
+}
+
+.menu-expanded
+{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-expanded #header #titulo
+{
+    display: inline-block;
+    width: calc(100%-50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header #titulo span
+{
+    width: calc(var(--width) - var(--widthcoll) - 5px);
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.menu-expanded .div_perfil .div_foto
+{
+    width: 200px;
+}
+
+.menu-expanded .div_perfil .div_usuario
+{
+    width: 100%;
+}
+
+.menu-collapsed
+{
+    width: var(--widthcoll);    
+}
+
+
+.menu-collapsed #header #titulo
+{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.menu-collapsed .div_perfil .div_foto
+{    
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.menu-collapsed .div_perfil .div_usuario
+{
+    display: none;
+}
+
+
+.menu-collapsed .items
+{
+    width: 100px;
+}
+
+
+/*MENÚ*/
+
+#div_main_conten
+{
+    width: 100%;
+    height: 150px;
+}
+
+.sec_general_aj
+{
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    margin-top: 50px;
+}
+
+
+.div_h1
+{    
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.div_h1 h1:before
+{
+    padding-left: 20px;
+    content: 'Ajustes de estilo';    
+    font-size: 1.5em;    
+}
+
+
+.div_cont_contraste, .div_cont_texto
+{
+    margin-top: 50px;
+    height: auto;
+    padding-bottom: 20px;
+    display: flex;        
+}
+
+.div_cont_contraste fieldset, .div_cont_texto fieldset
+{
+    width: 60%;
+    margin-left: 20px;
+}
+
+.div_cont_contraste fieldset legend, .div_cont_texto fieldset legend
+{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 20px;    
+}
+
+
+.div_cont_sel, .div_cont_tmnio_txt, .div_cont_espacio_letras, .div_cont_fuente
+{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 75px;
+}
+
+.div_cont_sel select, .div_cont_tmnio_txt select, .div_cont_espacio_letras select, .div_cont_fuente select
+{
+    width: 125px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.div_cont_sel h3:before
+{
+    content: 'Elija el contraste que desea agregar:';
+}
+
+.div_cont_tmnio_txt h3:before
+{
+    content: 'Elija el tamaño del texto:';
+}
+
+.div_cont_espacio_letras h3:before
+{
+    content: 'Elija el espaciado entre letras:';
+}
+
+.div_cont_fuente h3:before
+{
+    content: 'Elija el tipo de fuente:';
+}
+
+.div_ejm_contr, .div_ejm_text
+{    
+    width: 35%;
+    height: 105px;    
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_ejm_text
+{
+    height: 250px;    
+}
+
+.div_ejm_contr div, .div_ejm_text div
+{
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px #929191 solid;
+}
+
+
+.div_ejm_contr h3:before, .div_ejm_text h3:before
+{
+    content: 'AaBbCcDdEe';
+}
+
+
+.div_cont_apl_can
+{
+    margin-top: 20px;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.div_cont_btns
+{
+    width: 400px;
+    height: 75px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.btn_aceptar, .btn_cancelar
+{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    font: normal normal bold 13px/normal Arial, Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    width: 100px;
+}
+
+.btn_aceptar
+{
+    margin-left: 1%;
+    background-color: #0199d9;
+    border: 1px solid #018dc4;
+}
+
+.btn_aceptar:hover
+{
+    background-color: #007b93;
+}
+
+
+.btn_cancelar
+{
+    margin-right: 1%;
+    background-color: #696969;
+    border: 1px solid #696969;
+}
+
+.btn_cancelar:hover
+{
+    background-color: #3E3E3E;
+}

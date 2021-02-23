@@ -1,0 +1,477 @@
+:root
+{
+    --width: 300px;
+    --padding: 10px;
+    --bgcolor: rgb(52,52,52);
+    --hovercolor: rgb(23,23,23);
+    --widthcoll: 50px;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.body-expanded
+{
+    margin-left: var(--width);
+}
+
+
+
+#sidemenu
+{
+    background-color: rgb(52,52,52);
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+#sidemenu a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+#sidemenu #header
+{
+    box-sizing: border-box;
+    border-bottom: solid 1px rgb(23,23,23);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+#sidemenu #header #titulo
+{
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 85%;
+}
+
+
+#sidemenu #header #titulo, #sidemenu #header #div_cont_menu
+{
+    vertical-align: middle;
+}
+
+#sidemenu #header #div_cont_menu
+{
+    display: inline-block;
+}
+
+#sidemenu #header #div_cont_menu
+{
+    cursor: pointer;
+    padding: 10px;
+    width: var(--widthcoll);
+    box-sizing: border-box;    
+}
+
+#sidemenu #header #div_cont_menu:hover
+{
+    background-color: rgb(23,23,23);
+}
+
+
+#sidemenu #header #div_cont_menu .div_btn_ham
+{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;    
+}
+
+
+#sidemenu .div_perfil
+{
+    border-bottom: solid 1px rgb(23,23,23);
+    padding: var(--pading) 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#sidemenu .div_perfil .div_foto
+{
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 auto;   
+    margin-top: 10px;
+    border: 1px #000000 solid;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+#sidemenu .div_perfil .div_foto span
+{    
+    border-radius: 50%;
+    width: 60%;
+}
+
+#sidemenu .div_perfil .div_foto, #sidemenu .div_perfil .div_usuario
+{
+    font-size: 24px;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+
+#sidemenu #menu_items
+{
+    overflow: hidden;
+}
+
+#sidemenu #menu_items .items
+{
+    width: var(--width);    
+}
+
+#sidemenu #menu_items .items .div_img
+{
+    display: inline-block;
+}
+
+
+#sidemenu #menu_items .items .div_img, #sidemenu #menu_items .items .div_nombre_opcion
+{
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#sidemenu #menu_items .items a
+{
+    display: block;    
+}
+
+#sidemenu #menu_items .items a:hover
+{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #menu_items .items .div_img
+{
+    box-sizing: border-box;
+    padding: var(--padding);
+    width: var(--widthcoll);
+}
+
+#sidemenu #menu_items .items .div_img img
+{
+    width: 100%;
+}
+
+#sidemenu #menu_items .items .div_nombre_opcion
+{
+    padding: var(--padding) 0;
+}
+
+
+#sidemenu #menu_items .items.separator
+{
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor);
+    margin: 15px 0;    
+}
+
+.menu-expanded
+{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-expanded #header #titulo
+{
+    display: inline-block;
+    width: calc(100%-50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header #titulo span
+{
+    width: calc(var(--width) - var(--widthcoll) - 5px);
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.menu-expanded .div_perfil .div_foto
+{
+    width: 200px;
+}
+
+.menu-expanded .div_perfil .div_usuario
+{
+    width: 100%;
+}
+
+.menu-collapsed
+{
+    width: var(--widthcoll);    
+}
+
+
+.menu-collapsed #header #titulo
+{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.menu-collapsed .div_perfil .div_foto
+{    
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.menu-collapsed .div_perfil .div_usuario
+{
+    display: none;
+}
+
+
+.menu-collapsed .items
+{
+    width: 100px;
+}
+
+
+/*MENÚ*/
+
+#div_main_conten
+{
+    width: 100%;
+    height: 150px;
+}
+
+
+.div_cont_tb_pac
+{
+    margin-top: 50px;    
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.div_cont_tb_pac div
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_cont_tb_pac div h1:before
+{
+    content: 'Mis Pacientes';
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+table
+{
+    width: 92%;
+    height: auto;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+
+
+table thead
+{
+    box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.75);
+}
+
+
+table tr td
+{
+    border: 1px #d6d6d6 solid;    
+    padding-left: 10px;
+    margin: 0;
+}
+
+table tr .accionEd, table tr .registro
+{    
+    text-align: center;    
+}
+table tr .accionEd
+{
+    color: #3295EB;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+table tr .accionEl
+{
+    text-align: center;    
+}
+table tr .accionEl a
+{
+    text-align: center;
+    color: #eb3232;
+}
+
+table tbody tr
+{
+    height: 50px;
+}
+
+
+
+table thead .nombres
+{
+    width: 45%;
+    height: 50px;
+    text-align: center;
+    border: 1px #d6d6d6 solid;
+    border-right: none;
+    font-weight: 800;   
+}
+
+table thead .detalles
+{
+    border: 1px #d6d6d6 solid;
+    border-left: none;
+    text-align: center;
+    width: 5%;
+    height: 50px;    
+}
+
+table thead .detalles, table thead .condicion, table thead .ultimo_reg
+{
+    font-weight: bold;
+    border: 1px #d6d6d6 solid;
+}
+
+
+
+/*MODAL*/
+.modal
+{
+    width: 100%;
+    height: 100vh;    
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;    
+    display: flex;
+    align-items: center;
+    justify-content: center;        
+}
+
+.div_cont
+{
+    width: 70%;
+    height: 75vh;
+    background-color: #FFFFFF;
+}
+
+.div_cont_secciones
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px #d6d6d6 solid;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+.div_cont_personales
+{        
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;        
+    box-sizing: border-box;
+    cursor: pointer;    
+    color: #FFFFFF;    
+}
+
+.div_cont_personales h3:before
+{
+    font-size: 1.4em;
+    content: 'DATOS DEL PACIENTE';
+    font-weight: bold;
+}
+
+
+.div_cont_d_per
+{
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+
+.div_primer_fila, .div_segunda_fila, .div_tecer_fila
+{
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 27%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.div_pf_c1, .div_pf_c2, .div_pf_c3, .div_sf_c1, .div_sf_c2, .div_sf_c3, .div_tf_c1, .div_tf_c2, .div_tf_c3
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px #d6d6d6 solid;
+}
+
+.div_izq, .div_der
+{    
+    height: 70px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_izq
+{
+    width: 120px;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+.div_der
+{
+    width: calc(100% - 120px);
+    justify-content: flex-start;    
+}
