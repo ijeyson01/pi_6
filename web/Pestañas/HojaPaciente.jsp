@@ -12,7 +12,7 @@
         <script src="../js/jquery.min.js" type="text/javascript"></script>        
         <link href="../css/cssPrincipal.css" rel="stylesheet" type="text/css"/>
 
-        <title>JSP Page</title>
+        <title>+ Health Signals | Paciente</title>
     </head>
     <body>
         <div id="sidemenu" class="menu-expanded">
