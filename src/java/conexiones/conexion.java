@@ -5,6 +5,7 @@ package conexiones;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import com.google.gson.Gson;
 import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,6 +13,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
@@ -167,108 +170,55 @@ public class conexion {
         System.out.println(estr_tabla);
         return estr_tabla;
 
-    }
+    } 
+    
+    public String list() throws SQLException {
+        conexion conec = new conexion();
 
-//public static ResultSet Consulta(String Cadena) // Este string es la consulta
-//{
-//
-//        try
-//        {
-//            //Class.forName("org.postgresql.Driver");
-//           // Connection conex = DriverManager.getConnection(cadena, usuario, clave);
-//            Connection conex = AbrirConexion();
-//            java.sql.Statement st = conex.createStatement();
-//          //  String sql = "Select region_id, region_description from region";
-//            ResultSet result = st.executeQuery(Cadena);    //data set en C#
-//            return result;
-//
-//        }
-//        catch (Exception exc)
-//        {
-//            System.out.println("error: " +exc.getMessage()); 
-//        }
-//        return null;
-//}
-//public static void CargarjTable(JTable tabla1,String consulta ) throws SQLException{
-//       //try
-//       // {
-//            DefaultTableModel model=new DefaultTableModel();
-//            tabla1.setModel(model);
-//            tabla1.removeAll();
-//            Connection conext = AbrirConexion();
-//           //try () {
-//               java.sql.Statement state=conext.createStatement();
-//               ResultSet result=state.executeQuery(consulta);
-//               ResultSetMetaData resultMD=result.getMetaData();
-//               int cantColumns=resultMD.getColumnCount();
-//               for (int i = 1; i <= cantColumns; i++)
-//               {
-//                   model.addColumn(resultMD.getColumnLabel(i));
-//               }
-//               while(result.next())
-//               {
-//                   Object[] row=new Object[cantColumns];
-//                   for (int i = 0; i < cantColumns; i++)
-//                   {
-//                       row[i]=result.getObject(i+1);
-//                   }
-//                   model.addRow(row);
-//               }
-//               result.close();
-//          // }
-//       // }
-//       // catch(SQLException ex)
-//       // {
-//         //  JOptionPane.showMessageDialog(null, ex.getMessage()); 
-//       // }
-//    }
-//public  void LlenarTablaX(JTable tabla1,String consulta ) throws SQLException{
-//      // try
-//       // {
-//            DefaultTableModel model=new DefaultTableModel();
-//            tabla1.setModel(model);
-//            tabla1.removeAll();
-//            Connection conext = AbrirConexion();
-//          // try () {
-//               java.sql.Statement state=conext.createStatement();
-//               ResultSet result=state.executeQuery(consulta);
-//               ResultSetMetaData resultMD=result.getMetaData();
-//               int cantColumns=resultMD.getColumnCount();
-//               for (int i = 1; i <= cantColumns; i++)
-//               {
-//                   model.addColumn(resultMD.getColumnLabel(i));
-//               }
-//               while(result.next())
-//               {
-//                   Object[] row=new Object[cantColumns];
-//                   for (int i = 0; i < cantColumns; i++)
-//                   {
-//                       row[i]=result.getObject(i+1);
-//                   }
-//                   model.addRow(row);
-//               }
-//               result.close();
-//    }
-//  public int Verifica(String usuario, String pass) {
-//
-// try
-//        {
-//            Connection conex = AbrirConexion();
-//            java.sql.Statement st = conex.createStatement();
-//            ResultSet result = st.executeQuery("select * from acceso where usuario='" + usuario + "' and contrasenia ='" + pass + "' ");    //data set en C#
-//             try {
-//                while (result.next()) {
-//                    return 1;
-//                }
-//            } catch (Exception e) {
-//            }
-//        }
-//        catch (Exception exc)
-//        {
-//            System.out.println("error: " +exc.getMessage()); 
-//        }
-//        return 0;
-//    }
-//    
+        List<Pacientes> listPac = new ArrayList<Pacientes>();
+        Gson gson = new Gson();
+        try (Connection conn = conec.AbrirConexion()) {
+            String sql = "SELECT public.fn_select_paciente()";
+            java.sql.Statement sta = conn.createStatement();
+            ResultSet res = sta.executeQuery(sql);
+
+            while (res.next()) {
+                String nom = res.getString("fn_select_paciente").trim();
+                Pacientes pac = new Pacientes(nom);
+                listPac.add(pac);
+            }
+            return gson.toJson(listPac);
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            throw ex;
+        }
+    }
+    
+    public String listDP(String paciente) throws SQLException {
+        conexion conec = new conexion();
+
+        List<DatosPaciente> listPac = new ArrayList<DatosPaciente>();
+        Gson gson = new Gson();
+        try (Connection conn = conec.AbrirConexion()) {
+            String sql = "SELECT * FROM public.fn_select_datos_paciente('"+paciente+"')";
+            java.sql.Statement sta = conn.createStatement();
+            ResultSet res = sta.executeQuery(sql);
+
+            while (res.next()) {
+                String descripCondicion = res.getString("descrip").trim();
+                String descripTipoCondicion = res.getString("descriptipo").trim();
+                String edad = res.getString("edad").trim();
+                DatosPaciente pac = new DatosPaciente(descripCondicion,descripTipoCondicion,edad);
+                listPac.add(pac);
+            }
+            return gson.toJson(listPac);
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            throw ex;
+        }
+    }
+    
 
 }

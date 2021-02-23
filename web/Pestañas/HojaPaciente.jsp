@@ -91,10 +91,10 @@
                             </div>
                             <div>
                                 <table>
-                                    <tr><td>Paciente:</td><td><div id="lblNombrePaciente">-</div></td></tr>
-                                    <tr><td>Condición:</td><td><div id="lblCondicionPaciente">-</div></td></tr>
-                                    <tr><td>Tipo condición:</td><td><div id="lblTipoCondicion">-</div></td></tr>
-                                    <tr><td>Edad:</td><td><div id="lblEdadPaciente">-</div></td></tr>
+                                    <tr><td><b>Paciente:</b></td><td><div id="lblNombrePaciente"><select id="pacientes"></select></div></td></tr>
+                                    <tr><td><b>Condición:</b></td><td><div id="lblCondicionPaciente">-</div></td></tr>
+                                    <tr><td><b>Tipo condición:</b></td><td><div id="lblTipoCondicion">-</div></td></tr>
+                                    <tr><td><b>Edad:</b></td><td><div id="lblEdadPaciente">-</div></td></tr>
                                 </table>
                             </div>
                             <div class="Sec_botones_Admin">
@@ -171,5 +171,6 @@
 
         <script src="../js/Slider.js" type="text/javascript"></script>
         <script src="../js/ModalReportes.js" type="text/javascript"></script>
+        <script src="../js/HojaPaciente.js" type="text/javascript"></script>
     </body>
 </html>
