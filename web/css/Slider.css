@@ -1,0 +1,266 @@
+
+/* MENÚ VERTICAL*/
+/*:root
+{
+    --width: 300px;
+    --padding: 10px;
+    --bgcolor: rgb(52,52,52);
+    --hovercolor: rgb(23,23,23);
+    --widthcoll: 50px;
+}*/
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: 50px;
+}
+
+.body-expanded
+{
+    margin-left: 300px;
+}
+
+
+#div_main_conten
+{
+    color: red;
+}
+
+#sidemenu
+{
+    background-color: rgb(52,52,52);
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+#sidemenu a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+#sidemenu #header
+{
+    box-sizing: border-box;
+    border-bottom: solid 1px rgb(23,23,23);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+#sidemenu #header #titulo
+{
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 85%;
+}
+
+
+#sidemenu #header #titulo, #sidemenu #header #div_cont_menu
+{
+    vertical-align: middle;
+}
+
+#sidemenu #header #div_cont_menu
+{
+    display: inline-block;
+}
+
+#sidemenu #header #div_cont_menu
+{
+    cursor: pointer;
+    padding: 10px;
+    width: 50px;
+    box-sizing: border-box;    
+}
+
+#sidemenu #header #div_cont_menu:hover
+{
+    background-color: rgb(23,23,23);
+}
+
+
+#sidemenu #header #div_cont_menu .div_btn_ham
+{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;    
+}
+
+
+#sidemenu .div_perfil
+{
+    border-bottom: solid 1px rgb(23,23,23);
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#sidemenu .div_perfil .div_foto
+{
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 auto;   
+    margin-top: 10px;
+    border: 1px #000000 solid;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#sidemenu .div_perfil .div_foto span
+{    
+    border-radius: 50%;
+    width: 60%;
+}
+
+#sidemenu .div_perfil .div_foto, #sidemenu .div_perfil .div_usuario
+{
+    font-size: 24px;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+
+#sidemenu #menu_items
+{
+    overflow: hidden;
+}
+
+#sidemenu #menu_items .items
+{
+    width: 300px;    
+}
+
+#sidemenu #menu_items .items .div_img
+{
+    display: inline-block;
+}
+
+
+#sidemenu #menu_items .items .div_img, #sidemenu #menu_items .items .div_nombre_opcion
+{
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#sidemenu #menu_items .items a
+{
+    display: block;    
+}
+
+#sidemenu #menu_items .items a:hover
+{
+    background-color: rgb(23,23,23);
+}
+
+#sidemenu #menu_items .items .div_img
+{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 50px;
+}
+
+#sidemenu #menu_items .items .div_img img
+{
+    width: 100%;
+}
+
+#sidemenu #menu_items .items .div_nombre_opcion
+{
+    padding: 10px 0;
+}
+
+
+#sidemenu #menu_items .items.separator
+{
+    height: 1px;
+    border-bottom: solid 1px rgb(23,23,23);
+    margin: 15px 0;    
+}
+
+.menu-expanded
+{
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 100px;
+    overflow-y: scroll;
+    width: 300px;
+    scrollbar-color: white gray;
+    scrollbar-width: 8px;
+}
+
+.menu-expanded #header #titulo
+{
+    display: inline-block;
+    width: calc(100%-50px);
+    margin-right: -5px;
+    padding: 10px;
+}
+
+.menu-expanded #header #titulo span
+{
+    width: calc(300px - 50px - 5px);
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.menu-expanded .div_perfil .div_foto
+{
+    width: 200px;
+}
+
+.menu-expanded .div_perfil .div_usuario
+{
+    width: 100%;
+}
+
+.menu-collapsed
+{
+    width: 50px;    
+}
+
+
+.menu-collapsed #header #titulo
+{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.menu-collapsed .div_perfil .div_foto
+{    
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.menu-collapsed .div_perfil .div_usuario
+{
+    display: none;
+}
+
+
+.menu-collapsed .items
+{
+    width: 100px;
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e819819-53c2-4fa7-bb67-9b3f50fe4600">
+	<property name="ireport.zoom" value="3.1384283767210035"/>
+	<property name="ireport.x" value="561"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select p.identificacion, concat(p.nombres||' '||p.apellidos) as contacto,
+p.email, cp.telefono, cp.telefono2, cp.direccioncontacto, cp.direccioncontacto2,
+pa1.paciente, pa1.condicion, pa1.tipocondicion
+from persona p 
+inner join contactocuidadopaciente cp on p.personaid = cp.personaid
+inner join(
+select concat(nombres||' '||apellidos) as Paciente,
+c.descripcioncondicion as Condicion, t.descripciontipocondicion TipoCondicion,
+	pc.contactoid
+from persona p inner join paciente pa
+on pa.personaid = p.personaid inner join condicionpaciente c
+on c.condicionid = pa.condicionid inner join tipocondicionpaciente t 
+on t.tipocondicion = c.tipocondicion inner join paciente_contacto pc
+on pc.pacienteid = pa.pacienteid)  pa1 on
+pa1.contactoid = cp.contactoid]]>
+	</queryString>
+	<field name="identificacion" class="java.lang.String"/>
+	<field name="contacto" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="telefono2" class="java.lang.String"/>
+	<field name="direccioncontacto" class="java.lang.String"/>
+	<field name="direccioncontacto2" class="java.lang.String"/>
+	<field name="paciente" class="java.lang.String"/>
+	<field name="condicion" class="java.lang.String"/>
+	<field name="tipocondicion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="138" splitType="Stretch">
+			<staticText>
+				<reportElement x="154" y="78" width="249" height="24" uuid="a2e1a774-6c3b-42e0-a15a-707ba2af1564"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de pacientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="102" width="249" height="18" uuid="4a325290-79e5-4bbb-a647-a65e1e5118c2"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código ####]]></text>
+			</staticText>
+			<image>
+				<reportElement x="205" y="14" width="144" height="64" uuid="70b7430e-ee60-4881-9f80-c5801e4c66a1"/>
+				<imageExpression><![CDATA["C:\\Users\\USER\\Documents\\NetBeansProjects\\Pi6_Av\\web\\Imagenes\\Concepto_HM.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="121" splitType="Stretch">
+			<textField>
+				<reportElement x="75" y="7" width="219" height="20" uuid="6fe7b82a-d73c-495f-89b6-6249bdca12f1"/>
+				<textFieldExpression><![CDATA[$F{identificacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="27" width="219" height="20" uuid="61f0918b-b008-4acb-8921-c733684236cc"/>
+				<textFieldExpression><![CDATA[$F{contacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="67" width="219" height="20" uuid="1e051a54-3948-4b4c-ad0e-8a4a7ce22206"/>
+				<textFieldExpression><![CDATA[$F{direccioncontacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="47" width="219" height="20" uuid="685a4e5f-1bda-43f4-a27d-07295b94abfa"/>
+				<textFieldExpression><![CDATA[$F{direccioncontacto2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="7" width="75" height="20" uuid="7877d5b0-726e-4bae-a505-7c09436624ba"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Identificación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="27" width="75" height="20" uuid="3a898e00-e243-4cf8-abd6-b98198458ddf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contacto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="75" height="20" uuid="07040f59-4639-43f1-bf55-bc087144c974"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Domicilio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="67" width="75" height="20" uuid="980c5256-c8e7-4dcd-a209-259fa830ab2e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trabajo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="7" width="54" height="20" uuid="2fcae3f6-b57a-44a4-9ce3-1dbbe088ad94"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="27" width="54" height="20" uuid="8abd64bd-31d1-4730-b77c-8f6df8703501"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="47" width="54" height="20" uuid="64e90773-f4e5-452d-a753-d0812d4014ac"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono 2:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="386" y="7" width="135" height="20" uuid="32137269-9179-42c4-baa0-2d3b55d22161"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="27" width="135" height="20" uuid="a0da0c78-ad91-4694-9102-d1712ecc299a"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="47" width="135" height="20" uuid="d96253b5-b519-4037-a92e-83004de36c76"/>
+				<textFieldExpression><![CDATA[$F{telefono2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement x="15" y="22" width="529" height="1" uuid="55fd6e1f-159c-497c-b996-ff2585658527"/>
+			</line>
+			<staticText>
+				<reportElement x="27" y="2" width="174" height="20" uuid="41df914d-f9ee-41b9-9072-6d8fe45c80c6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pacientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="2" width="100" height="20" uuid="d06e8af0-7585-4bcc-b6da-a75dd8e0661b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Condición]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="2" width="100" height="20" uuid="3fe2ff77-3e11-44b5-8488-595e8f16f413"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo condición]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="27" y="3" width="174" height="20" uuid="c17a5751-6a79-432a-8883-235f25ab1821"/>
+				<textFieldExpression><![CDATA[$F{paciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="3" width="127" height="20" uuid="21d75cee-15f6-456d-ae55-0288157cafa8"/>
+				<textFieldExpression><![CDATA[$F{condicion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="3" width="189" height="20" uuid="b0312963-c004-483f-ba2d-7acb755f4ff2"/>
+				<textFieldExpression><![CDATA[$F{tipocondicion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
